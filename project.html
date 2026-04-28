@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Detailed explanation of Jagruthi Pulumati's DVA project on maternal and neonatal health during COVID-19."
+    />
+    <title>Project Details | Maternal &amp; Newborn Health</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">Jagruthi Pulumati</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html#projects">Projects</a>
+        <a href="#overview">Overview</a>
+        <a href="#insights">Insights</a>
+        <a href="#dashboard">Dashboard</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="detail-hero">
+        <p class="eyebrow">Detailed Project Explanation</p>
+        <h1>Impact of COVID-19 on Maternal &amp; Newborn Health</h1>
+        <p>
+          This project analyzes maternal mental health and neonatal outcomes
+          during the COVID-19 pandemic using data from the Pregnancy during the
+          COVID-19 Pandemic study conducted in Canada.
+        </p>
+        <div class="hero-actions">
+          <a
+            class="button primary"
+            href="https://github.com/Jag2007/SectionC_Group6_Pregnant_Women_COVID19"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub Repository
+          </a>
+          <a
+            class="button secondary"
+            href="https://github.com/Jag2007/SectionC_Group6_Pregnant_Women_COVID19/blob/main/Report/Final_Project_Report_Group6_v3.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            View Report
+          </a>
+          <a class="button secondary" href="index.html#projects">Back To Projects</a>
+        </div>
+      </section>
+
+      <section class="section stats-strip" aria-label="Project KPIs">
+        <div><strong>5,389</strong><span>Cleaned records</span></div>
+        <div><strong>3,415 g</strong><span>Average birth weight</span></div>
+        <div><strong>19.4%</strong><span>Preterm birth rate</span></div>
+        <div><strong>29.36%</strong><span>C-section rate</span></div>
+        <div><strong>18.43 / 35</strong><span>Average anxiety score</span></div>
+        <div><strong>51.54 / 100</strong><span>Average pandemic stress</span></div>
+      </section>
+
+      <section class="section two-column" id="overview">
+        <div>
+          <p class="eyebrow">What The Project Talks About</p>
+          <h2>Maternal stress, anxiety, and newborn outcomes during COVID-19.</h2>
+        </div>
+        <div class="text-stack">
+          <p>
+            The project studies how pregnancy during the pandemic was connected
+            with mental health indicators and birth outcomes. It looks at
+            maternal age, household income, education level, EPDS depression
+            severity, PROMIS anxiety, pandemic stress, gestational age, birth
+            weight, delivery mode, and NICU admission.
+          </p>
+          <p>
+            The final output is a dashboard-based descriptive analysis. Instead
+            of building a prediction model, the goal is to make the dataset
+            easier to understand through KPIs, segmentation, pivot tables, and
+            interactive filters.
+          </p>
+        </div>
+      </section>
+
+      <section class="section process-grid">
+        <article>
+          <span class="number">01</span>
+          <h3>Data Cleaning</h3>
+          <p>
+            Removed unknown and incomplete records, handled missing numeric
+            values with median or mode logic, reviewed extreme birth weight and
+            gestational age values, and removed the delivery date column.
+          </p>
+        </article>
+        <article>
+          <span class="number">02</span>
+          <h3>Feature Engineering</h3>
+          <p>
+            Created age category, depression severity, preterm status, income
+            group, and maternal pandemic stress fields to make the dataset more
+            useful for analysis.
+          </p>
+        </article>
+        <article>
+          <span class="number">03</span>
+          <h3>Dashboard Design</h3>
+          <p>
+            Built scorecards, charts, slicers, and pivot-based views in Google
+            Sheets so users can analyze outcomes by demographic and health
+            factors.
+          </p>
+        </article>
+      </section>
+
+      <section class="section" id="dashboard">
+        <div class="section-heading">
+          <p class="eyebrow">Dashboard</p>
+          <h2>How the project is showcased visually.</h2>
+          <p>
+            The dashboard includes KPI scorecards, preterm distribution by age
+            category, income group distribution, maternal education by income
+            group, depression severity by income, and mental health by education.
+          </p>
+        </div>
+        <div class="dashboard-frame">
+          <img src="assets/dashboard.png" alt="Maternal and neonatal health dashboard" />
+        </div>
+      </section>
+
+      <section class="section two-column" id="insights">
+        <div>
+          <p class="eyebrow">Key Insights</p>
+          <h2>What the analysis found.</h2>
+        </div>
+        <div class="text-stack">
+          <ul class="clean-list">
+            <li>Anxiety and pandemic stress levels were elevated across the study population.</li>
+            <li>The preterm birth rate in the cleaned dataset was 19.4%.</li>
+            <li>Young mothers under 25 and high-risk mothers over 35 showed relatively higher preterm proportions.</li>
+            <li>Lower-income groups showed a higher proportion of severe depression cases.</li>
+            <li>C-section deliveries showed higher NICU admission rates compared with vaginal deliveries.</li>
+            <li>Mothers reported greater concern for their unborn baby than for their own health.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section recommendation-grid">
+        <article>
+          <h3>Recommendations</h3>
+          <p>
+            Routine EPDS and anxiety screening, targeted support for lower-income
+            groups, age-based prenatal risk flagging, and psychosocial stress
+            assessment during prenatal intake.
+          </p>
+        </article>
+        <article>
+          <h3>Limitations</h3>
+          <p>
+            The analysis has data attrition after removing unknown values,
+            self-reported birth outcomes, approximate income midpoint
+            conversion, and no post-pandemic comparison cohort.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p><a href="index.html">Back to portfolio home</a></p>
+    </footer>
+  </body>
+</html>

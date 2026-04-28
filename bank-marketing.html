@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Detailed explanation of a DVA bank marketing campaign analytics project with Tableau dashboards."
+    />
+    <title>Bank Marketing Campaign Analysis | DVA Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html">Jagruthi Pulumati</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html#projects">Projects</a>
+        <a href="#overview">Overview</a>
+        <a href="#dashboards">Dashboards</a>
+        <a href="#insights">Insights</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="detail-hero">
+        <p class="eyebrow">Detailed Project Explanation</p>
+        <h1>Bank Marketing Campaign Analysis</h1>
+        <p>
+          This project studies a Portuguese banking institution's direct
+          marketing campaign data to understand what drives customers to
+          subscribe to a term deposit. The analysis connects customer profile,
+          call strategy, previous interaction history, and macroeconomic
+          conditions to conversion performance.
+        </p>
+        <div class="hero-actions">
+          <a
+            class="button primary"
+            href="https://github.com/Lalith0024/Section_C_Group_11_Bank_Marketing_Dataset"
+            target="_blank"
+            rel="noopener"
+          >
+            GitHub Repository
+          </a>
+          <a class="button secondary" href="index.html#projects">Back To Projects</a>
+        </div>
+      </section>
+
+      <section class="section stats-strip" aria-label="Bank project KPIs">
+        <div><strong>41,188</strong><span>Raw rows</span></div>
+        <div><strong>41,176</strong><span>Cleaned rows</span></div>
+        <div><strong>27</strong><span>Cleaned columns</span></div>
+        <div><strong>11.27%</strong><span>Overall conversion</span></div>
+        <div><strong>4.3</strong><span>Average call duration</span></div>
+        <div><strong>65.11%</strong><span>Prior success conversion</span></div>
+      </section>
+
+      <section class="section two-column" id="overview">
+        <div>
+          <p class="eyebrow">What The Project Talks About</p>
+          <h2>Which customers are more likely to subscribe, and when should the bank contact them?</h2>
+        </div>
+        <div class="text-stack">
+          <p>
+            The project analyzes one row per customer contact from a term-deposit
+            marketing campaign. The target variable is whether the customer
+            subscribed after the campaign interaction.
+          </p>
+          <p>
+            The main business goal is to improve campaign targeting. Instead of
+            contacting everyone the same way, the dashboard separates customers
+            by job, education, marital status, loan profile, contact channel,
+            previous campaign outcome, recency, and interest-rate environment.
+          </p>
+        </div>
+      </section>
+
+      <section class="section process-grid">
+        <article>
+          <span class="number">01</span>
+          <h3>Cleaning</h3>
+          <p>
+            Standardized column names, removed 12 duplicate rows, converted
+            yes/no subscription values into a binary flag, retained Unknown
+            categories to avoid biased imputation, and capped campaign-contact
+            outliers at 10.
+          </p>
+        </article>
+        <article>
+          <span class="number">02</span>
+          <h3>Feature Engineering</h3>
+          <p>
+            Created age group, call intensity, contacted-before flag, contact
+            recency, rate environment, previous success flag, and education
+            ordinal fields for analysis and Tableau sorting.
+          </p>
+        </article>
+        <article>
+          <span class="number">03</span>
+          <h3>Statistical Analysis</h3>
+          <p>
+            Used ANOVA and Chi-Square tests to check whether age group, job,
+            contact intensity, contact type, prior success, and rate environment
+            significantly affect subscription behavior.
+          </p>
+        </article>
+      </section>
+
+      <section class="section" id="dashboards">
+        <div class="section-heading">
+          <p class="eyebrow">Tableau Dashboard Showcase</p>
+          <h2>Four dashboard views built for decision-making.</h2>
+          <p>
+            The Tableau dashboards explain who the customers are, how campaign
+            strategy affects conversion, whether previous interactions matter,
+            and how economic conditions shape subscription behavior.
+          </p>
+        </div>
+
+        <div class="dashboard-gallery">
+          <figure>
+            <img src="assets/bank-customer-profile.jpeg" alt="Customer profile Tableau dashboard" />
+            <figcaption>Customer Profile: customers by region, job, education, marital status, and loan status.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/bank-campaign-effectiveness.jpeg" alt="Campaign effectiveness Tableau dashboard" />
+            <figcaption>Campaign Effectiveness: conversion by call intensity, month, contact type, previous outcome, and recency.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/bank-interaction-history.jpeg" alt="Interaction history Tableau dashboard" />
+            <figcaption>Interaction History: previous contact behavior, prior success, cold contact conversion, and recency patterns.</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/bank-economic-impact.jpeg" alt="Economic impact Tableau dashboard" />
+            <figcaption>Economic Impact: conversion across interest-rate environments, employment indicators, and consumer confidence.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section two-column" id="insights">
+        <div>
+          <p class="eyebrow">Key Insights</p>
+          <h2>What the analysis found.</h2>
+        </div>
+        <div class="text-stack">
+          <ul class="clean-list">
+            <li>The overall subscription conversion rate is 11.27%, so raw customer counts alone can be misleading.</li>
+            <li>Cellular contact performs much better than telephone contact, with a 14.74% conversion rate compared with 5.23%.</li>
+            <li>Customers with prior campaign success convert at 65.11%, making previous success the strongest signal.</li>
+            <li>Recently contacted and moderately contacted customers convert far better than never-contacted customers.</li>
+            <li>Higher call intensity reduces conversion; one-contact groups perform better than heavily contacted groups.</li>
+            <li>Low interest-rate environments show much stronger conversion than high-rate environments.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section recommendation-grid">
+        <article>
+          <h3>Recommendations</h3>
+          <p>
+            Prioritize customers with prior success, use cellular outreach where
+            possible, avoid excessive repeated calls, build recency-based
+            follow-up lists, and time campaigns more aggressively during
+            favorable rate environments.
+          </p>
+        </article>
+        <article>
+          <h3>Limitations</h3>
+          <p>
+            Call duration is useful for retrospective analysis but should not be
+            used as a pre-call predictor because it is only known after the call.
+            Unknown categories were retained, and macroeconomic variables are
+            highly correlated, so they should be interpreted carefully.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p><a href="index.html#projects">Back to all projects</a></p>
+    </footer>
+  </body>
+</html>
