@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Detailed explanation of a DVA bank marketing campaign analytics project with Tableau dashboards."
+      content="Detailed DVA case study by Jagruthi Pulumati on bank marketing campaign analytics with Tableau dashboards."
     />
-    <title>Bank Marketing Campaign Analysis | DVA Portfolio</title>
+    <title>Bank Marketing Campaign Analysis | DVA Case Study</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -15,22 +15,21 @@
       <a class="brand" href="index.html">Jagruthi Pulumati</a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="index.html#projects">Projects</a>
-        <a href="#overview">Overview</a>
+        <a href="#problem">Problem</a>
+        <a href="#dataset">Dataset</a>
         <a href="#dashboards">Dashboards</a>
-        <a href="#insights">Insights</a>
+        <a href="#impact">Impact</a>
       </nav>
     </header>
 
     <main>
       <section class="detail-hero">
-        <p class="eyebrow">Detailed Project Explanation</p>
+        <p class="eyebrow">DVA Portfolio Case Study</p>
         <h1>Bank Marketing Campaign Analysis</h1>
         <p>
-          This project studies a Portuguese banking institution's direct
-          marketing campaign data to understand what drives customers to
-          subscribe to a term deposit. The analysis connects customer profile,
-          call strategy, previous interaction history, and macroeconomic
-          conditions to conversion performance.
+          A Tableau-based finance analytics project studying which customers are
+          most likely to subscribe to a term deposit and how campaign strategy
+          can improve conversion.
         </p>
         <div class="hero-actions">
           <a
@@ -45,81 +44,141 @@
         </div>
       </section>
 
-      <section class="section stats-strip" aria-label="Bank project KPIs">
-        <div><strong>41,188</strong><span>Raw rows</span></div>
-        <div><strong>41,176</strong><span>Cleaned rows</span></div>
-        <div><strong>27</strong><span>Cleaned columns</span></div>
-        <div><strong>11.27%</strong><span>Overall conversion</span></div>
-        <div><strong>4.3</strong><span>Average call duration</span></div>
-        <div><strong>65.11%</strong><span>Prior success conversion</span></div>
-      </section>
-
-      <section class="section two-column" id="overview">
+      <section class="section case-study-section" id="problem">
         <div>
-          <p class="eyebrow">What The Project Talks About</p>
-          <h2>Which customers are more likely to subscribe, and when should the bank contact them?</h2>
+          <p class="eyebrow">01</p>
+          <h2>Problem statement and stakeholder context</h2>
         </div>
         <div class="text-stack">
           <p>
-            The project analyzes one row per customer contact from a term-deposit
-            marketing campaign. The target variable is whether the customer
-            subscribed after the campaign interaction.
+            Banks run direct marketing campaigns to sell term deposits, but
+            broad outreach can waste time and reduce customer experience. This
+            project asks which customer segments, contact channels, interaction
+            histories, and economic conditions are most connected with campaign
+            conversion.
           </p>
           <p>
-            The main business goal is to improve campaign targeting. Instead of
-            contacting everyone the same way, the dashboard separates customers
-            by job, education, marital status, loan profile, contact channel,
-            previous campaign outcome, recency, and interest-rate environment.
+            The stakeholders are campaign managers, sales teams, and banking
+            strategy teams who need to prioritize high-potential customers,
+            choose better contact methods, and time campaigns more effectively.
           </p>
         </div>
       </section>
 
-      <section class="section process-grid">
-        <article>
-          <span class="number">01</span>
-          <h3>Cleaning</h3>
+      <section class="section case-study-section" id="dataset">
+        <div>
+          <p class="eyebrow">02</p>
+          <h2>Dataset source and scope</h2>
+        </div>
+        <div class="text-stack">
           <p>
-            Standardized column names, removed 12 duplicate rows, converted
-            yes/no subscription values into a binary flag, retained Unknown
-            categories to avoid biased imputation, and capped campaign-contact
-            outliers at 10.
+            The project uses the UCI Bank Marketing Campaign dataset from a
+            Portuguese banking institution. Each row represents one customer
+            contact in a direct marketing campaign, with the target variable
+            showing whether the customer subscribed to a term deposit.
           </p>
-        </article>
-        <article>
-          <span class="number">02</span>
-          <h3>Feature Engineering</h3>
-          <p>
-            Created age group, call intensity, contacted-before flag, contact
-            recency, rate environment, previous success flag, and education
-            ordinal fields for analysis and Tableau sorting.
-          </p>
-        </article>
-        <article>
-          <span class="number">03</span>
-          <h3>Statistical Analysis</h3>
-          <p>
-            Used ANOVA and Chi-Square tests to check whether age group, job,
-            contact intensity, contact type, prior success, and rate environment
-            significantly affect subscription behavior.
-          </p>
-        </article>
+          <div class="stats-strip inline-stats" aria-label="Bank dataset scope">
+            <div><strong>41,188</strong><span>Raw rows</span></div>
+            <div><strong>41,176</strong><span>Cleaned rows</span></div>
+            <div><strong>27</strong><span>Cleaned columns</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-study-section">
+        <div>
+          <p class="eyebrow">03</p>
+          <h2>Cleaning and transformation summary</h2>
+        </div>
+        <div class="text-stack">
+          <ul class="clean-list">
+            <li>Standardized raw column names into readable analysis columns.</li>
+            <li>Removed 12 exact duplicate rows.</li>
+            <li>Converted the subscription target from yes/no into a binary subscription flag.</li>
+            <li>Retained Unknown categories instead of imputing them, to avoid adding bias.</li>
+            <li>Capped extreme campaign contact counts at 10 to reduce outlier distortion.</li>
+          </ul>
+          <div class="process-grid mini-grid">
+            <article>
+              <h3>Customer Features</h3>
+              <p>Age group, education ordinal, job type, marital status, and loan flags.</p>
+            </article>
+            <article>
+              <h3>Campaign Features</h3>
+              <p>Call intensity, contact type, contact month, and previous contact count.</p>
+            </article>
+            <article>
+              <h3>Context Features</h3>
+              <p>Contact recency, prior success flag, and interest-rate environment.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section case-study-section">
+        <div>
+          <p class="eyebrow">04</p>
+          <h2>KPI framework</h2>
+        </div>
+        <div class="stats-strip inline-stats" aria-label="Bank project KPIs">
+          <div><strong>41,176</strong><span>Total customers</span></div>
+          <div><strong>4,639</strong><span>Successful customers</span></div>
+          <div><strong>11.27%</strong><span>Overall conversion</span></div>
+          <div><strong>14.74%</strong><span>Cellular conversion</span></div>
+          <div><strong>65.11%</strong><span>Prior success conversion</span></div>
+          <div><strong>24.02%</strong><span>Low-rate conversion</span></div>
+        </div>
+      </section>
+
+      <section class="section case-study-section" id="insights">
+        <div>
+          <p class="eyebrow">05</p>
+          <h2>3-5 key insights</h2>
+        </div>
+        <div class="text-stack">
+          <ul class="clean-list">
+            <li>Customers with prior campaign success convert at 65.11%, making previous success the strongest signal.</li>
+            <li>Cellular outreach converts at 14.74%, much higher than telephone outreach at 5.23%.</li>
+            <li>Conversion falls as call intensity rises, showing that excessive repeated contact is not effective.</li>
+            <li>Recently and moderately contacted customers convert much better than never-contacted customers.</li>
+            <li>Low-rate environments show stronger subscription behavior than high-rate environments.</li>
+          </ul>
+        </div>
       </section>
 
       <section class="section" id="dashboards">
         <div class="section-heading">
-          <p class="eyebrow">Tableau Dashboard Showcase</p>
-          <h2>Four dashboard views built for decision-making.</h2>
+          <p class="eyebrow">06</p>
+          <h2>Tableau dashboard screenshots and link</h2>
           <p>
-            The Tableau dashboards explain who the customers are, how campaign
-            strategy affects conversion, whether previous interactions matter,
-            and how economic conditions shape subscription behavior.
+            The Tableau story is organized into four views: customer profile,
+            campaign effectiveness, interaction history, and economic impact.
+            The repository contains the project assets and dashboard link notes.
           </p>
+          <div class="hero-actions compact-actions">
+            <a
+              class="button secondary"
+              href="https://github.com/Lalith0024/Section_C_Group_11_Bank_Marketing_Dataset/tree/main/tableau"
+              target="_blank"
+              rel="noopener"
+            >
+              Open Tableau Folder
+            </a>
+            <a
+              class="button secondary"
+              href="https://github.com/Lalith0024/Section_C_Group_11_Bank_Marketing_Dataset"
+              target="_blank"
+              rel="noopener"
+            >
+              Open Repository
+            </a>
+          </div>
         </div>
 
         <div class="dashboard-gallery">
           <figure>
             <img src="assets/bank-customer-profile.jpeg" alt="Customer profile Tableau dashboard" />
-            <figcaption>Customer Profile: customers by region, job, education, marital status, and loan status.</figcaption>
+            <figcaption>Customer Profile: region, job, education, marital status, housing loan, and success rate.</figcaption>
           </figure>
           <figure>
             <img src="assets/bank-campaign-effectiveness.jpeg" alt="Campaign effectiveness Tableau dashboard" />
@@ -127,51 +186,53 @@
           </figure>
           <figure>
             <img src="assets/bank-interaction-history.jpeg" alt="Interaction history Tableau dashboard" />
-            <figcaption>Interaction History: previous contact behavior, prior success, cold contact conversion, and recency patterns.</figcaption>
+            <figcaption>Interaction History: prior contact behavior, prior success, cold contacts, and recency conversion.</figcaption>
           </figure>
           <figure>
             <img src="assets/bank-economic-impact.jpeg" alt="Economic impact Tableau dashboard" />
-            <figcaption>Economic Impact: conversion across interest-rate environments, employment indicators, and consumer confidence.</figcaption>
+            <figcaption>Economic Impact: rate environment, employment indicators, consumer confidence, and conversion patterns.</figcaption>
           </figure>
         </div>
       </section>
 
-      <section class="section two-column" id="insights">
+      <section class="section case-study-section" id="impact">
         <div>
-          <p class="eyebrow">Key Insights</p>
-          <h2>What the analysis found.</h2>
+          <p class="eyebrow">07</p>
+          <h2>Recommendations and expected impact</h2>
         </div>
-        <div class="text-stack">
-          <ul class="clean-list">
-            <li>The overall subscription conversion rate is 11.27%, so raw customer counts alone can be misleading.</li>
-            <li>Cellular contact performs much better than telephone contact, with a 14.74% conversion rate compared with 5.23%.</li>
-            <li>Customers with prior campaign success convert at 65.11%, making previous success the strongest signal.</li>
-            <li>Recently contacted and moderately contacted customers convert far better than never-contacted customers.</li>
-            <li>Higher call intensity reduces conversion; one-contact groups perform better than heavily contacted groups.</li>
-            <li>Low interest-rate environments show much stronger conversion than high-rate environments.</li>
-          </ul>
+        <div class="recommendation-grid">
+          <article>
+            <h3>Prioritize Prior Success</h3>
+            <p>
+              Build campaign lists around customers with previous successful
+              outcomes. Expected impact: higher conversion by focusing on the
+              strongest repeat-subscription segment.
+            </p>
+          </article>
+          <article>
+            <h3>Use Cellular Outreach</h3>
+            <p>
+              Prefer cellular contact over telephone when available. Expected
+              impact: stronger response rates through the better-performing
+              contact channel.
+            </p>
+          </article>
+          <article>
+            <h3>Reduce Over-Contacting</h3>
+            <p>
+              Limit repeated calls after early attempts. Expected impact:
+              reduced campaign fatigue and better use of sales team time.
+            </p>
+          </article>
+          <article>
+            <h3>Time Campaigns By Rates</h3>
+            <p>
+              Increase campaign intensity in low-rate environments. Expected
+              impact: better timing when customers appear more open to term
+              deposit subscriptions.
+            </p>
+          </article>
         </div>
-      </section>
-
-      <section class="section recommendation-grid">
-        <article>
-          <h3>Recommendations</h3>
-          <p>
-            Prioritize customers with prior success, use cellular outreach where
-            possible, avoid excessive repeated calls, build recency-based
-            follow-up lists, and time campaigns more aggressively during
-            favorable rate environments.
-          </p>
-        </article>
-        <article>
-          <h3>Limitations</h3>
-          <p>
-            Call duration is useful for retrospective analysis but should not be
-            used as a pre-call predictor because it is only known after the call.
-            Unknown categories were retained, and macroeconomic variables are
-            highly correlated, so they should be interpreted carefully.
-          </p>
-        </article>
       </section>
     </main>
 
